@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1828">
+  <meta name="description" content="NoiseGuard UX: prototipo visual de monitoreo de exposición sonora para músicos y docentes.">
+  <title>NoiseGuard UX | Cuida tu audición</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="app-shell" id="app-shell">
+    <header class="topbar">
+      <div class="topbar-brand">NoiseGuard UX</div>
+      <div class="topbar-right"><span class="demo-tag">PROTOTIPO · DATOS DEMOSTRATIVOS</span><button class="profile-button" type="button" data-view="ajustes">Mi perfil <span aria-hidden="true">●</span></button></div>
+    </header>
+
+    <aside class="sidebar" aria-label="Navegación principal">
+      <p class="nav-label">MI ESPACIO</p>
+      <nav class="desktop-nav">
+        <button type="button" class="nav-link is-active" data-view="inicio">Inicio</button>
+        <button type="button" class="nav-link" data-view="alertas">Alertas <span id="alert-count" class="nav-count" hidden>0</span></button>
+        <button type="button" class="nav-link" data-view="historial">Historial</button>
+        <button type="button" class="nav-link" data-view="guia">Guía auditiva</button>
+        <button type="button" class="nav-link" data-view="docente">Modo docente</button>
+        <button type="button" class="nav-link" data-view="ahorro">Ahorro</button>
+        <button type="button" class="nav-link" data-view="ajustes">Ajustes</button>
+      </nav>
+      <div class="sidebar-footer"><strong>NoiseGuard UX</strong><span>Tu práctica, a tu ritmo.</span><span>Prototipo académico · UPC</span></div>
+    </aside>
+
+    <main class="main" id="contenido" tabindex="-1">
+      <div id="screen" class="screen" aria-live="polite"></div>
+    </main>
+
+    <aside class="context-panel" aria-label="Accesos rápidos">
+      <section class="context-card"><h2>Tu espacio de práctica</h2><p>Información clara, alertas visuales y descansos a tu ritmo.</p></section>
+      <section class="context-card"><h2>Datos de demostración</h2><p>Las cifras, tiempos y registros de este prototipo son simulados. No reemplazan un sonómetro calibrado.</p><button class="btn btn-primary btn-block" type="button" data-action="quick-start">Iniciar práctica personal</button><button class="btn btn-outline btn-block" type="button" data-view="docente">Ir al modo docente</button><button class="btn btn-quiet btn-block" type="button" data-view="alertas">Revisar mis avisos</button></section>
+    </aside>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <button class="mobile-link is-active" type="button" data-view="inicio"><span aria-hidden="true">⌂</span><small>Inicio</small></button>
+      <button class="mobile-link" type="button" data-view="alertas"><span aria-hidden="true">◌</span><small>Alertas</small></button>
+      <button class="mobile-link" type="button" data-view="ahorro"><span aria-hidden="true">◐</span><small>Ahorro</small></button>
+      <button class="mobile-link" type="button" data-view="ajustes"><span aria-hidden="true">⚙</span><small>Ajustes</small></button>
+    </nav>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
